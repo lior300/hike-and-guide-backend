@@ -1,8 +1,10 @@
 const dbService = require('../../services/db.service')
 const ObjectId = require('mongodb').ObjectId
+const logger = require('../../services/logger.service')
+
 
 module.exports = {
-    // getByEmail,
+    getByEmail,
     query,
     getById,
     remove,
@@ -35,16 +37,21 @@ async function getById(userId) {
     }
 }
 
-// async function getByEmail(email) {
-//     const collection = await dbService.getCollection('user')
-//     try {
-//         const user = await collection.findOne({ email })
-//         return user
-//     } catch (err) {
-//         console.log(`ERROR: while finding user ${email}`)
-//         throw err;
-//     }
-// }
+async function getByEmail(email) {
+    logger.debug(`user.service.getByEmail - Looking for user: ${email}`)
+    const collection = await dbService.getCollection('user')
+    try {
+        const user = await collection.findOne({ email })
+        if (user){
+            logger.debug(`user.service.getByEmail - user found: ${email}`)
+        } else logger.info(`user.service.getByEmail - user not found: ${email}`)        
+        return user
+    } catch (err) {
+        logger.error(`user.service.getByEmail got error. username: ${email}`)
+        console.log(`ERROR: while finding user ${email}`)
+        throw err;
+    }
+}
 
 async function remove(userId) {
     const collection = await dbService.getCollection('user')

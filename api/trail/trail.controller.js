@@ -8,7 +8,6 @@ async function getTrail(req, res) {
 
 async function getTrails(req, res) {
     const trials = await trailService.query(req.query)
-    logger.debug(trials);
     res.send(trials)
 }
 

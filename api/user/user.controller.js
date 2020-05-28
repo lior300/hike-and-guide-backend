@@ -8,7 +8,6 @@ async function getUser(req, res) {
 
 async function getUsers(req, res) {
     const users = await userService.query(req.query)
-    logger.debug(users);
     res.send(users)
 }
 

@@ -7,7 +7,7 @@ const session = require('express-session')
 
 const app = express()
 const http = require('http').createServer(app);
-const io = require('socket.io')(http);
+// const io = require('socket.io')(http);
 
 // Express App Config
 app.use(cookieParser())
@@ -30,10 +30,11 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 const authRoutes = require('./api/auth/auth.routes')
-const connectSockets = require('./api/socket/socket.routes')
+// const connectSockets = require('./api/socket/socket.routes')
 const reviewRoutes = require('./api/review/review.routes')
 const userRoutes = require('./api/user/user.routes')
 const trailRoutes = require('./api/trail/trail.routes')
+const orderRoutes = require('./api/order/order.routes')
 
 
 // routes
@@ -41,12 +42,13 @@ app.use('/api/auth', authRoutes)
 app.use('/api/review', reviewRoutes)
 app.use('/api/user', userRoutes)
 app.use('/api/trail', trailRoutes)
-connectSockets(io)
+app.use('/api/order', orderRoutes)
+// connectSockets(io)
 
 
-app.get('/**', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
-})
+// app.get('/**', (req, res) => {
+//     res.sendFile(path.join(__dirname, 'public', 'index.html'));
+// })
 
 const logger = require('./services/logger.service')
 const port = process.env.PORT || 3030;
