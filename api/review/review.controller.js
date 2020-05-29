@@ -24,7 +24,9 @@ async function deleteReview(req, res) {
 
 async function addReview(req, res) {
     var review = req.body;
-    review.byUser = req.session.user;
+    // console.log(review)
+    // console.log("r.s.user",req.session.user)
+    // review.by = req.session.user;
     review = await reviewService.add(review)
     res.send(review)
 }

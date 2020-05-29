@@ -25,7 +25,8 @@ async function remove(reviewId) {
 }
 
 async function add(review) {
-    review.byUser._id = ObjectId(review.byUser._id);
+    console.log(review)
+    // review.by._id = ObjectId(review.by._id);
     const collection = await dbService.getCollection('review')
     try {
         await collection.insertOne(review);
