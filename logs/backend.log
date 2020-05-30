@@ -1091,4 +1091,87 @@ Thu, 28 May 2020 13:45:46 GMT - Info - Server is running on port: 3030
 Thu, 28 May 2020 13:46:21 GMT - Info - Server is running on port: 3030
 Thu, 28 May 2020 13:46:23 GMT - Info - Server is running on port: 3030
 Thu, 28 May 2020 14:17:45 GMT - Info - Server is running on port: 3030
+<<<<<<< HEAD
 Thu, 28 May 2020 14:35:02 GMT - Info - Server is running on port: 3030
+=======
+Sat, 30 May 2020 10:33:01 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 10:33:01 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 10:34:36 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 10:34:36 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 10:36:37 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 10:36:37 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 10:39:47 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 10:39:47 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 10:41:33 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 10:41:33 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 10:41:59 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 10:41:59 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 10:43:34 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 10:43:34 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 10:44:45 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 10:44:45 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 10:46:10 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 10:46:11 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 10:48:03 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 10:48:03 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 10:49:04 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 10:49:04 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 10:53:13 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 10:53:13 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 10:54:27 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 10:54:27 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 10:55:25 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 10:55:25 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 10:58:31 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 10:58:31 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 11:02:17 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 11:02:17 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 11:02:58 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 11:02:58 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 11:03:13 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 11:03:13 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 11:05:09 GMT - Info - Server is running on port: 3030
+Sat, 30 May 2020 11:05:13 GMT - Info - Server is running on port: 3030
+Sat, 30 May 2020 11:05:16 GMT - Info - Server is running on port: 3030
+Sat, 30 May 2020 11:05:25 GMT - Info - Server is running on port: 3030
+Sat, 30 May 2020 11:05:38 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 11:05:39 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 11:06:02 GMT - Info - Server is running on port: 3030
+Sat, 30 May 2020 11:06:58 GMT - Info - Server is running on port: 3030
+Sat, 30 May 2020 11:43:30 GMT - Info - Server is running on port: 3030
+Sat, 30 May 2020 11:44:54 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 11:44:56 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 11:48:41 GMT - Info - Server is running on port: 3030
+Sat, 30 May 2020 11:49:06 GMT - Info - Server is running on port: 3030
+Sat, 30 May 2020 11:49:22 GMT - Info - Server is running on port: 3030
+Sat, 30 May 2020 12:00:13 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 12:00:13 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 12:00:24 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 12:00:24 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 12:00:34 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 12:00:34 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 12:01:13 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 12:01:13 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 12:10:53 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 12:10:53 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 12:11:06 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 12:11:06 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 12:19:34 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 12:19:34 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 12:20:59 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 12:20:59 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 12:35:43 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 12:35:43 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 12:52:49 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 12:52:50 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 12:54:03 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 12:54:03 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 13:01:29 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 13:01:29 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 13:02:09 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 13:02:09 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 14:42:26 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 14:42:26 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 18:28:56 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
+Sat, 30 May 2020 18:28:56 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+>>>>>>> c00c3aa8feed66c2f371ebbceba57e8ea95bd316
