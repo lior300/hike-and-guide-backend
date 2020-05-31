@@ -22,9 +22,16 @@ async function updateUser(req, res) {
     res.send(user)
 }
 
+async function addTrailToGuide(req, res) {
+    const trailToGuide = req.body;
+    await userService.addTrailToGuide(trailToGuide)
+    res.end()
+}
+
 module.exports = {
     getUser,
     getUsers,
     deleteUser,
-    updateUser
+    updateUser,
+    addTrailToGuide
 }

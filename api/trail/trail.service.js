@@ -110,3 +110,4 @@ function _buildCriteria(filterBy) {
 
     return criteria;
 }
+

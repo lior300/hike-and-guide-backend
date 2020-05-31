@@ -1,10 +1,11 @@
 
 const dbService = require('../../services/db.service')
 const ObjectId = require('mongodb').ObjectId
+const COLLECTION_NAME = 'review'
 
 async function query(filterBy = {}) {
     const criteria = _buildCriteria(filterBy)
-    const collection = await dbService.getCollection('review')
+    const collection = await dbService.getCollection(COLLECTION_NAME)
     try {
         const reviews = await collection.find(criteria).toArray();
         return reviews
@@ -15,7 +16,7 @@ async function query(filterBy = {}) {
 }
 
 async function remove(reviewId) {
-    const collection = await dbService.getCollection('review')
+    const collection = await dbService.getCollection(COLLECTION_NAME)
     try {
         await collection.deleteOne({ "_id": ObjectId(reviewId) })
     } catch (err) {
@@ -27,7 +28,7 @@ async function remove(reviewId) {
 async function add(review) {
     console.log(review)
     // review.by._id = ObjectId(review.by._id);
-    const collection = await dbService.getCollection('review')
+    const collection = await dbService.getCollection(COLLECTION_NAME)
     try {
         await collection.insertOne(review);
         return review;

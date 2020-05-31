@@ -1,6 +1,6 @@
 const dbService = require('../../services/db.service')
 const ObjectId = require('mongodb').ObjectId
-
+COLLECTION_NAME= 'order'
 module.exports = {
     query,
     getById,
@@ -11,10 +11,9 @@ module.exports = {
 
 async function query(filterBy) {
     const criteria = _buildCriteria(filterBy)
-    const collection = await dbService.getCollection('order')
+    const collection = await dbService.getCollection(COLLECTION_NAME)
     try {
         const orders = await collection.find(criteria).toArray();
-        console.log(orders);
         return orders
     } catch (err) {
         console.log('ERROR: cannot find orders')
@@ -23,7 +22,7 @@ async function query(filterBy) {
 }
 
 async function getById(orderId) {
-    const collection = await dbService.getCollection('order')
+    const collection = await dbService.getCollection(COLLECTION_NAME)
     try {
         const order = await collection.findOne({ "_id": ObjectId(orderId) })
         return order
@@ -47,7 +46,7 @@ async function update(order) {
 }
 
 async function remove(orderId) {
-    const collection = await dbService.getCollection('order')
+    const collection = await dbService.getCollection(COLLECTION_NAME)
     try {
         await collection.deleteOne({ "_id": ObjectId(orderId) })
     } catch (err) {
@@ -57,8 +56,9 @@ async function remove(orderId) {
 }
 
 async function add(order) {
-    order.byUser._id = ObjectId(order.byUser._id);
-    const collection = await dbService.getCollection('order')
+    order.createAt=new Date()
+    order.isConfirmed = false;
+    const collection = await dbService.getCollection(COLLECTION_NAME)
     try {
         await collection.insertOne(order);
         return order;
@@ -71,6 +71,9 @@ async function add(order) {
 function _buildCriteria(filterBy) {
     const criteria = {}
     if (filterBy.guideId) {
-        criteria.guide = { _id: ObjectId(filterBy.userId) }
+        criteria.guide = { _id: filterBy.guideId }
+    }
+    if (filterBy.userId) {
+        criteria.buyerUser = { _id: filterBy.buyUser }
     }
 }

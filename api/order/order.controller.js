@@ -22,17 +22,9 @@ async function updateOrder(req, res) {
     res.send(order)
 }
 
-async function addOrder(order) {
-    const collection = await dbService.getCollection('order');
-    review.byUser = req.session.user;
-    try {
-        order = await orderService.add(order);
-        await collection.insertOne(orderToSave);
-        return orderToSave;
-    } catch (err) {
-        console.log(`ERROR: cannot insert order`);
-        throw err;
-    }
+async function addOrder(req, res) {
+    orderSaved = await orderService.add(req.body);
+    res.send(orderSaved)
 }
 
 module.exports = {
