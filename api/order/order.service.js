@@ -10,14 +10,13 @@ module.exports = {
 }
 
 async function query(filterBy) {
-    
     const criteria = _buildCriteria(filterBy)
-    console.log('criteria', criteria);
+    console.log('criteria:', criteria);
+
     const collection = await dbService.getCollection(COLLECTION_NAME)
     try {
         const orders = await collection.find(criteria).toArray();
         console.log('orders', orders);
-
         return orders
     } catch (err) {
         console.log('ERROR: cannot find orders')
@@ -28,7 +27,7 @@ async function query(filterBy) {
 async function getById(orderId) {
     const collection = await dbService.getCollection(COLLECTION_NAME)
     try {
-        const order = await collection.findOne({ "_id": ObjectId(orderId) })
+        const order = await collection.findOne({ $elemMatch: { "_id": ObjectId(orderId) } })
         return order
     } catch (err) {
         console.log(`ERROR: while finding order ${orderId}`)
@@ -60,7 +59,7 @@ async function remove(orderId) {
 }
 
 async function add(order) {
-    order.createAt = new Date()
+    order.createAt = Date.now()
     order.isConfirmed = false;
     const collection = await dbService.getCollection(COLLECTION_NAME)
     try {
@@ -73,12 +72,12 @@ async function add(order) {
 }
 
 function _buildCriteria(filterBy) {
-    const criteria = {}
+    let criteria = {}
     if (filterBy.guideId) {
-        criteria.guide = { _id: filterBy.guideId }
+        criteria = { "guide._id": filterBy.guideId }
     }
     if (filterBy.userId) {
-        criteria.buyerUser = { _id: filterBy.userId}
+        criteria.buyerUser = { "guide._id": filterBy.userId }
     }
-    // return criteria
+    return criteria
 }
