@@ -1,6 +1,6 @@
 const dbService = require('../../services/db.service')
 const ObjectId = require('mongodb').ObjectId
-COLLECTION_NAME= 'order'
+COLLECTION_NAME = 'order'
 module.exports = {
     query,
     getById,
@@ -10,10 +10,14 @@ module.exports = {
 }
 
 async function query(filterBy) {
+    
     const criteria = _buildCriteria(filterBy)
+    console.log('criteria', criteria);
     const collection = await dbService.getCollection(COLLECTION_NAME)
     try {
         const orders = await collection.find(criteria).toArray();
+        console.log('orders', orders);
+
         return orders
     } catch (err) {
         console.log('ERROR: cannot find orders')
@@ -56,7 +60,7 @@ async function remove(orderId) {
 }
 
 async function add(order) {
-    order.createAt=new Date()
+    order.createAt = new Date()
     order.isConfirmed = false;
     const collection = await dbService.getCollection(COLLECTION_NAME)
     try {
@@ -74,6 +78,7 @@ function _buildCriteria(filterBy) {
         criteria.guide = { _id: filterBy.guideId }
     }
     if (filterBy.userId) {
-        criteria.buyerUser = { _id: filterBy.buyUser }
+        criteria.buyerUser = { _id: filterBy.userId}
     }
+    // return criteria
 }
