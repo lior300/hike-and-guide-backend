@@ -1179,3 +1179,4 @@ Sat, 30 May 2020 18:42:04 GMT - Info - Server is running on port: 3030
 Sat, 30 May 2020 18:42:38 GMT - Info - Server is running on port: 3030
 Sat, 30 May 2020 18:46:33 GMT - Debug - user.service.getByEmail - Looking for user: admin@gmail.com
 Sat, 30 May 2020 18:46:34 GMT - Debug - user.service.getByEmail - user found: admin@gmail.com
+Sat, 30 May 2020 19:43:49 GMT - Info - Server is running on port: 3030
