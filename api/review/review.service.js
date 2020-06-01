@@ -43,7 +43,7 @@ function _buildCriteria(filterBy) {
     if (filterBy.guideId) {
         criteria.guide = { _id: ObjectId(filterBy.guideId) }
     } else if (filterBy.trailId) {
-        criteria.trail = { _id: ObjectId(filterBy.trail) }
+        criteria.trail = { _id: ObjectId(filterBy.trailId) }
     }
     return criteria;
 }
