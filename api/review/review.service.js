@@ -27,10 +27,9 @@ async function remove(reviewId) {
 
 async function add(review) {
     console.log(review)
-    // review.by._id = ObjectId(review.by._id);
     const collection = await dbService.getCollection(COLLECTION_NAME)
     try {
-        await collection.insertOne(review);
+        review = await collection.insertOne(review);
         return review;
     } catch (err) {
         console.log(`ERROR: cannot insert user`)
