@@ -3,7 +3,7 @@ const logger = require('../../services/logger.service')
 
 async function getOrders(req, res) {
     const orders = await orderService.query(req.query)
-    res.send(orders) 
+    res.send(orders)
 }
 
 async function getOrder(req, res) {
