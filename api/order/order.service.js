@@ -35,7 +35,7 @@ async function getById(orderId) {
 async function update(order) {
     const collection = await dbService.getCollection(COLLECTION_NAME)
     order._id = ObjectId(order._id);
-
+    order.updateAt = Date.now()
     try {
         await collection.replaceOne({ "_id": order._id }, { $set: order })
         return order
@@ -57,7 +57,7 @@ async function remove(orderId) {
 
 async function add(order) {
     order.createAt = Date.now()
-    order.isConfirmed = false;
+    order.updateAt = Date.now()
     const collection = await dbService.getCollection(COLLECTION_NAME)
     try {
         await collection.insertOne(order);
@@ -71,10 +71,10 @@ async function add(order) {
 function _buildCriteria(filterBy) {
     let criteria = {}
     if (filterBy.guideId) {
-        criteria = { "guide._id": filterBy.guideId }
+        criteria = { $and: [{ "guide._id": filterBy.guideId }, { "guide.isDeleted": false }] }
     }
     if (filterBy.userId) {
-        criteria = { "buyerUser._id": filterBy.userId }
+        criteria = { $and: [{ "buyerUser._id": filterBy.userId }, {"buyerUser.isDeleted": false}] }
     }
     return criteria
 }
